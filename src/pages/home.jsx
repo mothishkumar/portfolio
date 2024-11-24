@@ -41,12 +41,12 @@ export const Home = () => {
               </div>
               <span className="text-sm text-green-500">● Available for new projects</span>
             </div>
-            <div className="flex justify-center md:justify-start gap-6 mt-6">
+            <div className="relative flex justify-center md:justify-start gap-6 mt-6 hidden lg:block">
               <a href="https://twitter.com" aria-label="Twitter">
-                <Button type="link" icon={<TwitterOutlined />} className="text-blue-500 hover:text-blue-700 relative" />
+                <Button type="link" icon={<TwitterOutlined />} className="text-blue-500 hover:text-blue-700" />
               </a>
               <a href="https://github.com" aria-label="GitHub">
-                <Button type="link" icon={<GithubOutlined />} className="text-gray-700 hover:text-black relative" />
+                <Button type="link" icon={<GithubOutlined />} className="text-gray-700 hover:text-black" />
               </a>
             </div>
           </motion.div>
@@ -56,10 +56,11 @@ export const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
-            className="flex-1 flex justify-center items-center"
+            className="flex-1 md:flex justify-center items-center hidden"
           >
             <Image width={200} src="/mothish2.png" alt="Mothish's Portrait" className="shadow-lg relative" />
           </motion.div>
+          <img src="/mothish2.png" alt="Mothish's Portrait" className='md:hidden'/>
         </div>
       </motion.div>
 
