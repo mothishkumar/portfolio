@@ -60,7 +60,7 @@ function App() {
         <div
           className={`flex-1 bg-white overflow-auto transition-all ${
             isSidebarOpen ? 'ml-0' : ''
-          } lg:ml-[250px]` }
+          } lg:ml-[250px] mb-20 lg:mb-1` }
         >
           {/* Button to toggle sidebar visibility on mobile */}
           <button

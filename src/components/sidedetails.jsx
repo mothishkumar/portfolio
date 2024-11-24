@@ -124,9 +124,19 @@ export const Sidedetails = () => {
             borderRadius: "8px",
           }}
           size="large"
+          onClick={() => {
+            // Trigger the download
+            const link = document.createElement("a");
+            link.href = "/resume.pdf"; // Path to your resume file in the public folder
+            link.download = "Mothish_Kumar_Resume.pdf"; // The name of the file after download
+            document.body.appendChild(link); // Append to body to make the link actionable
+            link.click(); // Trigger click event
+            document.body.removeChild(link); // Clean up the link element
+          }}
         >
           Download CV
         </Button>
+        <div className="mb-20 lg:hidden"></div>
       </div>
     </Card>
   );
