@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Universal scrollbar styling */
+*::-webkit-scrollbar {
+    width: 1px; /* Scrollbar width */
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Scrollbar track color */
+  }
+  
