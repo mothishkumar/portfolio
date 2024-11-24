@@ -9,7 +9,7 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-export const Sidemenu = () => {
+export const Sidemenu = ({ isDarkMode, toggleDarkMode }) => {
   // State to manage the active menu item
   const [activeMenu, setActiveMenu] = useState("home");
   const [isMobile, setIsMobile] = useState(false);
@@ -41,14 +41,14 @@ export const Sidemenu = () => {
   }, []);
 
   return (
-    <div className="h-[80%] w-100 p-2 lg:w-20 flex lg:flex-col items-center py-4 border-r bg-white rounded-full border-gray-300 shadow-lg gap-2 lg:gap-8">
+    <div className="h-[80%] w-100 p-2 lg:w-18 flex lg:flex-col items-center py-4 border-r bg-white rounded-2xl border-gray-300 shadow-lg gap-2 lg:gap-8 dark:bg-slate-600">
       {/* Top Section */}
       <div className="lg:mb-10">
         <button
           className="p-3 rounded-full bg-gray-200 hover:bg-purple-500 transition-all duration-300 text-xl"
-          onClick={() => console.log("Toggle theme")}
+          onClick={toggleDarkMode}
         >
-          🌗 {/* Add a theme toggle icon here */}
+          {isDarkMode ? '🌞' : '🌙'}
         </button>
       </div>
 

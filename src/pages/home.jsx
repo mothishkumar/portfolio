@@ -6,8 +6,10 @@ import { DiMysql, DiMongodb } from 'react-icons/di';
 import { SiTypescript, SiTailwindcss, SiNextdotjs, SiNestjs, SiSupabase } from 'react-icons/si';
 
 export const Home = () => {
-  return (
-    <div className="bg-white min-h-screen">
+    return (
+    <div className="bg-white min-h-screen dark:bg-darkBackground">
+      
+
       {/* Hero Section with Animation */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -23,17 +25,17 @@ export const Home = () => {
             transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
             className="flex-1 text-center md:text-left"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 flex items-center gap-2">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-darkText flex items-center gap-2">
               Hi, I'm Mothish{" "}
               <span role="img" aria-label="wave">
                 👋
               </span>
             </h1>
-            <p className="text-lg text-gray-600 mt-4 max-w-3xl mx-auto md:mx-0">
+            <p className="text-lg text-gray-600 dark:text-darkText mt-4 max-w-3xl mx-auto md:mx-0">
               I’m a front-end developer with a passion for creating beautiful and accessible web experiences. I’m focused on building fast, responsive, and user-friendly websites and applications.
             </p>
             <div className="flex justify-center md:justify-start items-center gap-4 mt-6">
-              <div className="flex items-center gap-2 text-gray-700">
+              <div className="flex items-center gap-2 text-gray-700 dark:text-darkText">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16.24 3.56a1.5 1.5 0 012.12 0l2.12 2.12a1.5 1.5 0 010 2.12L5.64 23.64a3 3 0 11-4.24-4.24l16.84-16.84z" />
                 </svg>
@@ -41,7 +43,7 @@ export const Home = () => {
               </div>
               <span className="text-sm text-green-500">● Available for new projects</span>
             </div>
-            <div className="relative flex justify-center md:justify-start gap-6 mt-6 hidden lg:block">
+            <div className="relative lg:flex justify-center md:justify-start gap-6 mt-6 hidden">
               <a href="https://twitter.com" aria-label="Twitter">
                 <Button type="link" icon={<TwitterOutlined />} className="text-blue-500 hover:text-blue-700" />
               </a>
@@ -71,24 +73,24 @@ export const Home = () => {
         transition={{ duration: 1, ease: 'easeOut', delay: 0.6 }}
         className="p-8 md:p-16 rounded-lg mx-6 md:mx-16 -mt-20"
       >
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">Curious about me? Here you have it:</h2>
-        <p className="text-gray-600 mb-4">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-darkText mb-6">Curious about me? Here you have it:</h2>
+        <p className="text-gray-600 dark:text-darkText mb-4">
           I'm a passionate, <span className="text-blue-500 font-medium">self-proclaimed designer</span> who specializes in full-stack development (React.js & Node.js). I enjoy bringing the technical and visual aspects of digital products to life with a focus on user experience and performance.
         </p>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 dark:text-darkText mb-4">
           Since starting my web development journey in 2023, I’ve been building cutting-edge web applications using modern technologies such as <strong>Next.js, TypeScript, NestJS, TailwindCSS, Supabase</strong>, and much more.
         </p>
-        <p className="text-gray-600 mb-4">
+        <p className="text-gray-600 dark:text-darkText mb-4">
           I'm passionate about working on projects from ideation to full-stack development. When I'm not coding, you'll find me sharing tech insights on <span className="text-blue-500">Twitter</span> or building in public.
         </p>
-        <p className="text-gray-600 mt-6">
+        <p className="text-gray-600 dark:text-darkText mt-6">
           I’m always open to freelance work! Feel free to reach out and say hello. I promise I don't bite{" "}
           <span className="text-yellow-500">🐾</span>.
         </p>
       </motion.div>
 
-      <div className="p-8 md:p-16 mx-6 md:mx-16 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">My Skills:</h2>
+      <div className="p-8 md:p-16 mx-6 md:mx-16 bg-gray-50 dark:bg-darkBackground rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-darkText mb-6">My Skills:</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {/* Animated Skill Icons */}
           {[

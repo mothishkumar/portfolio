@@ -12,74 +12,55 @@ export const Sidedetails = () => {
 
   return (
     <Card
-      style={{
-        backgroundColor: "#fff",
-        color: "#333",
-        height: "100vh",
-        borderRadius: "16px",
-        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-        overflow: "auto",
-      }}
+      className="bg-white dark:bg-darkBackground text-gray-800 dark:text-darkText h-full rounded-lg shadow-lg overflow-auto"
     >
-      <div
-        style={{
-          height: "100%",
-          overflowY: "auto",
-          paddingRight: "8px", // Optional: Adds spacing for the scroll bar
-        }}
-      >
+      <div className="h-full overflow-y-auto pr-2">
         {/* Profile Image */}
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
+        <div className="flex justify-center mb-4">
           <img
             src="/mothish.jpg"
             alt="Mothish Kumar"
-            style={{
-              width: "100px",
-              height: "100px",
-              borderRadius: "50%",
-              objectFit: "cover",
-              border: "4px solid #6a0dad", // Changed to purple
-            }}
+            className="w-24 h-24 rounded-full object-cover border-4 border-purple-600"
           />
         </div>
 
         {/* Name and Job Title */}
-        <h2 style={{ textAlign: "center", fontWeight: "bold", marginBottom: "0.5rem" }}>K Mothish Kumar</h2>
-        <h3 style={{ textAlign: "center", color: "#6a0dad", marginBottom: "1rem" }}>Front-End Developer</h3>
+        <h2 className="text-center font-bold mb-2">K Mothish Kumar</h2>
+        <h3 className="text-center text-purple-600 mb-4">Front-End Developer</h3>
 
         {/* Social Icons */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "16px", marginBottom: "1rem" }}>
+        <div className="flex justify-center gap-4 mb-4">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <FaGithub size={28} style={{ color: "#333" }} />
+            <FaGithub size={28} className="text-gray-800 dark:text-white" />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={28} style={{ color: "#333" }} />
+            <FaLinkedin size={28} className="text-gray-800 dark:text-white" />
           </a>
         </div>
 
         <Divider />
 
         {/* Personal Details */}
-        <div style={{ marginBottom: "1rem" }}>
+        <div className="mb-4">
           <p>
-            <span style={{ fontWeight: "bold", color: "#6a0dad" }}>Age:</span> 22
+            <span className="font-bold text-purple-600">Age:</span> 22
           </p>
           <p>
-            <span style={{ fontWeight: "bold", color: "#6a0dad" }}>Residence:</span> Chittoor, India
+            <span className="font-bold text-purple-600">Residence:</span> Chittoor, India
           </p>
           <p>
-            <span style={{ fontWeight: "bold", color: "#6a0dad" }}>Freelance:</span> Available
+            <span className="font-bold text-purple-600">Freelance:</span> Available
           </p>
           <p>
-            <span style={{ fontWeight: "bold", color: "#6a0dad" }}>Address:</span> Chittoor, India
+            <span className="font-bold text-purple-600">Address:</span> Chittoor, India
           </p>
         </div>
 
         <Divider />
 
         {/* Language Progress */}
-        <h3 style={{ color: "#6a0dad", marginBottom: "1rem" }}>Languages</h3>
-        <div style={{ marginBottom: "1rem" }}>
+        <h3 className="text-purple-600 mb-4">Languages</h3>
+        <div className="mb-4">
           <p>English: {englishPercentage}%</p>
           <Progress percent={englishPercentage} showInfo={false} strokeColor="#6a0dad" />
           <p>Telugu: {teluguPercentage}%</p>
@@ -91,8 +72,8 @@ export const Sidedetails = () => {
         <Divider />
 
         {/* Skills Progress */}
-        <h3 style={{ color: "#6a0dad", marginBottom: "1rem" }}>Skills</h3>
-        <div style={{ marginBottom: "1rem" }}>
+        <h3 className="text-purple-600 mb-4">Skills</h3>
+        <div className="mb-4">
           <p>React.js: {reactPercentage}%</p>
           <Progress percent={reactPercentage} showInfo={false} strokeColor="#6a0dad" />
           <p>Next.js: {nextJsPercentage}%</p>
@@ -104,8 +85,8 @@ export const Sidedetails = () => {
         <Divider />
 
         {/* Extra Skills */}
-        <h3 style={{ color: "#6a0dad", marginBottom: "1rem" }}>Extra Skills</h3>
-        <ul style={{ paddingLeft: "20px", marginBottom: "1rem" }}>
+        <h3 className="text-purple-600 mb-4">Extra Skills</h3>
+        <ul className="pl-5 mb-4">
           <li>Tailwind CSS</li>
           <li>Responsive Design</li>
           <li>JavaScript (ES6+)</li>
@@ -117,12 +98,7 @@ export const Sidedetails = () => {
         {/* Download CV Button */}
         <Button
           type="primary"
-          style={{
-            width: "100%",
-            backgroundColor: "#6a0dad", // Changed to purple
-            borderColor: "#6a0dad", // Changed to purple
-            borderRadius: "8px",
-          }}
+          className="w-full bg-purple-600 border-purple-600 rounded-lg"
           size="large"
           onClick={() => {
             // Trigger the download

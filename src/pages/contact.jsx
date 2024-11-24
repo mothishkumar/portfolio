@@ -24,10 +24,10 @@ export const Contact = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-12">
-      <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+    <div className="bg-gray-100 py-12 dark:bg-[#1a202c]">
+      <div className="max-w-4xl mx-auto p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
         <motion.h2
-          className="text-4xl font-bold text-center mb-8 text-gray-800"
+          className="text-4xl font-bold text-center mb-8 text-gray-800 dark:text-[#f7fafc]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -44,14 +44,16 @@ export const Contact = () => {
         >
           {/* Name Input */}
           <div>
-            <label htmlFor="name" className="text-lg text-gray-700">Your Name</label>
+            <label htmlFor="name" className="text-lg text-gray-700 dark:text-[#f7fafc]">
+              Your Name
+            </label>
             <input
               type="text"
               name="name"
               id="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full mt-2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:text-[#f7fafc]"
               placeholder="Enter your name"
               required
             />
@@ -59,14 +61,16 @@ export const Contact = () => {
 
           {/* Email Input */}
           <div>
-            <label htmlFor="email" className="text-lg text-gray-700">Your Email</label>
+            <label htmlFor="email" className="text-lg text-gray-700 dark:text-[#f7fafc]">
+              Your Email
+            </label>
             <input
               type="email"
               name="email"
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full mt-2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:text-[#f7fafc]"
               placeholder="Enter your email"
               required
             />
@@ -74,13 +78,15 @@ export const Contact = () => {
 
           {/* Message Input */}
           <div>
-            <label htmlFor="message" className="text-lg text-gray-700">Your Message</label>
+            <label htmlFor="message" className="text-lg text-gray-700 dark:text-[#f7fafc]">
+              Your Message
+            </label>
             <textarea
               name="message"
               id="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full mt-2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full mt-2 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:text-[#f7fafc]"
               placeholder="Write your message"
               rows="6"
               required
@@ -91,7 +97,7 @@ export const Contact = () => {
           <div>
             <button
               type="submit"
-              className="w-full py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300"
+              className="w-full py-3 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 transition-all duration-300 dark:bg-purple-600 dark:hover:bg-purple-500"
             >
               Send Message
             </button>
@@ -99,7 +105,7 @@ export const Contact = () => {
         </motion.form>
 
         {/* Contact Information */}
-        <div className="mt-12 flex justify-around text-gray-700">
+        <div className="mt-12 flex justify-around text-gray-700 dark:text-[#f7fafc]">
           <div className="flex items-center">
             <FaPhone className="text-2xl mr-2" />
             <span>+91 6281151062</span>
@@ -129,4 +135,3 @@ export const Contact = () => {
     </div>
   );
 };
-

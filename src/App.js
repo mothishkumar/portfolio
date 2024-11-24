@@ -12,6 +12,10 @@ function App() {
   // State to toggle sidebar visibility
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [device, setDevice] = useState('laptop');
+  // Step 2.1: Dark mode state
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem('theme') === 'dark';
+  });
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -22,6 +26,17 @@ function App() {
     // Define the breakpoint for mobile vs laptop (1024px is a common breakpoint)
     return screenWidth < 1024 ? 'mobile' : 'laptop';
   }
+
+  // Step 2.2: Apply the theme to the document
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDarkMode]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,6 +55,11 @@ function App() {
     };
   }, []);
 
+  // Step 2.3: Toggle function
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   return (
     <Router>
       {device === 'mobile' ? (
@@ -51,7 +71,7 @@ function App() {
             <Sidedetails />
           </div>
         ) : (
-          <div className="w-[250px] p-2 bg-gray-300 fixed top-0 left-0 h-full">
+          <div className="w-[250px] p-2 bg-gray-300 fixed top-0 left-0 h-full dark:bg-slate-600">
             <Sidedetails />
           </div>
         )}
@@ -60,7 +80,7 @@ function App() {
         <div
           className={`flex-1 bg-white overflow-auto transition-all ${
             isSidebarOpen ? 'ml-0' : ''
-          } lg:ml-[250px] mb-20 lg:mb-1` }
+          } lg:ml-[250px] mb-20 lg:mb-1 dark:bg-darkBackground h-full` }
         >
           {/* Button to toggle sidebar visibility on mobile */}
           <button
@@ -87,7 +107,7 @@ function App() {
               : 'flex flex-col fixed top-0 right-0 h-full justify-center lg:flex'
           }`}
         >
-          <Sidemenu />
+          <Sidemenu isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
         </div>
     </Router>
   );
