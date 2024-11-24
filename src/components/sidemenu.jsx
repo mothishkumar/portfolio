@@ -23,9 +23,9 @@ export const Sidemenu = () => {
   ];
 
   return (
-    <div className="h-[80%] w-20 flex flex-col items-center py-4 border-r bg-white rounded-full border-gray-300 shadow-lg gap-8">
+    <div className="h-[80%] w-100 p-2 lg:w-20 flex lg:flex-col items-center py-4 border-r bg-white rounded-full border-gray-300 shadow-lg gap-2 lg:gap-8">
       {/* Top Section */}
-      <div className="mb-10">
+      <div className="lg:mb-10">
         <button
           className="p-3 rounded-full bg-gray-200 hover:bg-purple-500 transition-all duration-300 text-xl"
           onClick={() => console.log("Toggle theme")}
@@ -35,7 +35,7 @@ export const Sidemenu = () => {
       </div>
 
       {/* Menu Items */}
-      <div className="flex flex-col gap-6">
+      <div className="flex lg:flex-col gap-2 lg:gap-6">
         {menuItems.map((item) => (
           <Tooltip title={item.label} placement="right" key={item.key}>
             <Link

@@ -43,10 +43,10 @@ export const Home = () => {
             </div>
             <div className="flex justify-center md:justify-start gap-6 mt-6">
               <a href="https://twitter.com" aria-label="Twitter">
-                <Button type="link" icon={<TwitterOutlined />} className="text-blue-500 hover:text-blue-700" />
+                <Button type="link" icon={<TwitterOutlined />} className="text-blue-500 hover:text-blue-700 relative" />
               </a>
               <a href="https://github.com" aria-label="GitHub">
-                <Button type="link" icon={<GithubOutlined />} className="text-gray-700 hover:text-black" />
+                <Button type="link" icon={<GithubOutlined />} className="text-gray-700 hover:text-black relative" />
               </a>
             </div>
           </motion.div>
@@ -58,7 +58,7 @@ export const Home = () => {
             transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
             className="flex-1 flex justify-center items-center"
           >
-            <Image width={200} src="/mothish2.png" alt="Mothish's Portrait" className="shadow-lg" />
+            <Image width={200} src="/mothish2.png" alt="Mothish's Portrait" className="shadow-lg relative" />
           </motion.div>
         </div>
       </motion.div>
