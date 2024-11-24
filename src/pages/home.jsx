@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button, Image } from 'antd';
 import { GithubOutlined, TwitterOutlined } from '@ant-design/icons';
-import { FaReact, FaNodeJs, FaGithub, FaJsSquare, FaHtml5, FaCss3Alt, FaSass } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaJsSquare, FaHtml5, FaCss3Alt, FaSass } from 'react-icons/fa';
 import { DiMysql, DiMongodb } from 'react-icons/di';
 import { SiTypescript, SiTailwindcss, SiNextdotjs, SiNestjs, SiSupabase } from 'react-icons/si';
 

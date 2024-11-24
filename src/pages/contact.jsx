@@ -122,6 +122,7 @@ export const Contact = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Description of the iframe content"
           ></iframe>
         </div>
       </div>

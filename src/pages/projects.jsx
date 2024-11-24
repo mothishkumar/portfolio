@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaPython, FaDatabase } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
 import { DiJavascript1 } from 'react-icons/di';
 import { SiMongodb, SiFlask } from 'react-icons/si';
 
