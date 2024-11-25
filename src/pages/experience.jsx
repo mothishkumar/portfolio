@@ -1,5 +1,4 @@
 import React from 'react';
-import { Timeline } from 'antd';
 import { motion } from 'framer-motion';
 
 export const Experience = () => {
@@ -62,12 +61,13 @@ export const Experience = () => {
     <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
       {/* Experience Section */}
       <h2 className="text-3xl font-semibold mb-8 text-center text-purple-600 dark:text-purple-400">Work Experience</h2>
-      <Timeline mode="left">
+      <div className='flex'>
+        <div className='mr-2'>
+          <img src='esyasoft.png' alt='logo' className='w-40 h-10 lg:w-10 lg:h-10'/>
+        </div>
         {experiences.map((experience, index) => (
-          <Timeline.Item
+          <div
             key={index}
-            color={index % 2 === 0 ? 'blue' : 'green'}
-            dot={<img src="esyasoft.png" alt="icon" className="w-10 h-10 rounded-full" />}
           >
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -77,7 +77,6 @@ export const Experience = () => {
               <div className="text-lg font-medium text-gray-800 dark:text-gray-100">{experience.title}</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">{experience.duration}</div>
               <p className="text-gray-700 dark:text-gray-300 mt-2">{experience.description}</p>
-
               <div className="mt-4">
                 <h4 className="font-medium text-gray-700 dark:text-gray-200">Responsibilities:</h4>
                 <ul className="list-disc pl-5 text-gray-600 dark:text-gray-400">
@@ -101,9 +100,9 @@ export const Experience = () => {
                 </div>
               </div>
             </motion.div>
-          </Timeline.Item>
+          </div>
         ))}
-      </Timeline>
+      </div>
 
       {/* Project Showcase Section */}
       <h2 className="text-3xl font-semibold mt-16 mb-8 text-center text-purple-600 dark:text-purple-400">Featured Projects</h2>

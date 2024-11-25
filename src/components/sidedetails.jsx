@@ -43,7 +43,7 @@ export const Sidedetails = () => {
         {/* Personal Details */}
         <div className="mb-4">
           <p>
-            <span className="font-bold text-purple-600">Age:</span> 22
+            <span className="font-bold text-purple-600">Age:</span> 23
           </p>
           <p>
             <span className="font-bold text-purple-600">Residence:</span> Chittoor, India
